@@ -12,10 +12,14 @@ CSS stands for Cascading Style Sheets. It is a language used to describe the pre
 ![alt](./css-declaration.png)
 
 
+<img src="./css-declaration.png" width="150">
+
 **Implementation:**
 CSS can be applied to HTML elements using three different methods: Inline, Internal, and External.
 
 ![typesOfCss](./types-of-css.png)
+
+<img src="./types-of-css.png" width="150">
 1. **Inline CSS:**
    Inline CSS is applied directly to an HTML element using the `style` attribute. It's useful for making small, specific style changes.
 
