@@ -235,7 +235,7 @@ p {
   color: rgba(0, 0, 0, 0.2);
 }
 ```
-
+![alt text](image.png)
 ### 2. `background-clip`
 
 This property determines the portion of the background that should be visible based on the element's padding box, border box, or content box.
@@ -356,16 +356,10 @@ This property specifies the size of the background image(s).
 - `auto`: Default size of the image.
 - `cover`: Resize the image to cover the entire element while maintaining aspect ratio.
 - `contain`: Resize the image to fit inside the element while maintaining aspect ratio.
-- Length values: In pixels, ems, rems, etc.
+- `Length values`: In pixels, ems, rems, etc.
 
 **Example:**
 
-```css
-.element {
-  background-image: url("image.jpg");
-  background-size: cover;
-}
-```
 
 The `background-size` property in CSS is used to control the size of the background image within an element. Here's an explanation of the differences between `cover`, `contain`, and `100%`:
 
@@ -374,46 +368,71 @@ The `background-size` property in CSS is used to control the size of the backgro
    When you set `background-size: cover;`, the background image is scaled to cover the entire content area of the element while maintaining its aspect ratio. This means that the image will be enlarged (if necessary) to completely cover the element, potentially cropping parts of the image if it doesn't fit exactly.
    Basically It maksure that the image will cover all the parts of the element, no gaps are there, but sometimes the image will cropout.
 
-   Example:
 
-   ```css
-   .element {
-     background-image: url("image.jpg");
-     background-size: cover;
-   }
-   ```
 
 2. **`background-size: contain;`**
 
    With `background-size: contain;`, the background image is scaled to fit within the element's content area while also maintaining its aspect ratio. This ensures that the entire image is visible, and it might leave empty space around the image if the aspect ratios don't match.
 
-   Example:
 
-   ```css
-   .element {
-     background-image: url("image.jpg");
-     background-size: contain;
-   }
-   ```
 
 3. **`background-size: 100%;`**
 
    Setting `background-size: 100%;` means that the background image will be scaled to completely cover the element's content area, regardless of its original aspect ratio. This can lead to the image being stretched or distorted if its proportions are not the same as the element's proportions.
 
-   Example:
 
-   ```css
-   .element {
-     background-image: url("image.jpg");
-     background-size: 100%;
-   }
-   ```
 
-In summary:
 
-- `cover` ensures the image covers the entire element's content area, potentially cropping parts.
-- `contain` scales the image to fit within the element's content area while showing the whole image.
-- `100%` scales the image to cover the whole content area, without necessarily maintaining the image's aspect ratio.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            width: 300px;
+            height: 200px;
+            background-image: url('https://cdn.pixabay.com/photo/2013/06/07/09/53/twitter-117595_1280.png');
+            background-repeat: no-repeat;
+            border: 1px solid black;
+        }
+
+        /* Different background-size values */
+        .cover {
+            background-size: cover; /* Cover the entire container */
+        }
+
+        .contain {
+            background-size: contain; /* Fit the entire background image within the container */
+        }
+
+        .percentage {
+            background-size: 50% 75%; /* Set background size to 50% width and 75% height of the container */
+        }
+
+        .fixed {
+            background-size: 200px 150px; /* Fixed size of 200px width and 150px height */
+        }
+    </style>
+    <title>Background Size Example</title>
+</head>
+<body>
+    <h2>Cover</h2>
+    <div class="container cover"></div>
+
+    <h2>Contain</h2>
+    <div class="container contain"></div>
+
+    <h2>Percentage</h2>
+    <div class="container percentage"></div>
+
+    <h2>Fixed</h2>
+    <div class="container fixed"></div>
+</body>
+</html>
+```
+![alt text](image-1.png)
 
 
 ## CSS Box Model
@@ -660,7 +679,40 @@ You can define the margin values in different ways:
 | When you set the margin values the element size doesnot change, only the space arong it. | When you set padding values, the size of that element increses. |
 
 
-# Display Properties
-                                       
+### Box-sizing
 
+- Box-sizing property defines how the width and height gets applied on an element.
+- Box sizing is of 2 types
+    - content-box
+    - border-box
+
++ Default value of box-sizing is `content-box`, in this case the actual width of the box
+will be equal to the border and padding and width of the box <p>( Actual width : width + border + padding ).</p>
+
++ In case when box-sizing is set to be` border-box`, then the actual width will be equal
+to the width of the box itself. Means if we will increase the padding or border of
+the box then it will not increase the width of the box.
+
+```html
+<div class="content-box">Content box</div>
+<br>
+<div class="border-box">Border box</div>
+```
+
+```css
+div {
+width: 160px;
+height: 80px;
+padding: 20px;
+border: 8px solid rgb(47, 0, 255);
+background: rgb(240, 240, 95);
+}
+.content-box{
+box-sizing: content-box;
+}
+.border-box {
+box-sizing: border-box;
+}
+```
+![alt text](image-2.png)
 
