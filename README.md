@@ -12,14 +12,13 @@ CSS stands for Cascading Style Sheets. It is a language used to describe the pre
 ![alt](./css-declaration.png)
 
 
-<img src="./css-declaration.png" width="150">
 
 **Implementation:**
 CSS can be applied to HTML elements using three different methods: Inline, Internal, and External.
 
 ![typesOfCss](./types-of-css.png)
 
-<img src="./types-of-css.png" width="150">
+
 1. **Inline CSS:**
    Inline CSS is applied directly to an HTML element using the `style` attribute. It's useful for making small, specific style changes.
 
@@ -529,8 +528,11 @@ The CSS Box Model describes the layout and rendering of elements in a web page. 
 </body>
 </html>
 ```
+With border-collapse:separate;
+![alt text](image-3.png)
 
-In this example, `border-collapse: collapse;` is applied to the `<table>` element. This collapses the borders between cells into a single border. The `<th>` and `<td>` elements have a `border: 1px solid black;` style applied to create the cell borders.
+With border-collapse: collapse;
+![alt text](image-4.png)
 
 ### `border-radius`
 
@@ -561,8 +563,6 @@ In this example, `border-collapse: collapse;` is applied to the `<table>` elemen
 </body>
 </html>
 ```
-
-In this example, `.box` is a `<div>` element styled with a width and height of 200px, a light blue background, and a black border with a width of 2px. The `border-radius: 20px;` property creates rounded corners for the border with a radius of 20 pixels on all four corners.
 
 ### `border-spacing`
 
@@ -608,9 +608,6 @@ In this example, `.box` is a `<div>` element styled with a width and height of 2
 </body>
 </html>
 ```
-
-In this example, `border-collapse: separate;` is applied to the `<table>` element to display borders separately for each cell. `border-spacing: 10px 5px;` sets the horizontal spacing between cell borders to 10 pixels and the vertical spacing to 5 pixels. This creates space between adjacent cells in the table.
-
 
 
 ### Margin
