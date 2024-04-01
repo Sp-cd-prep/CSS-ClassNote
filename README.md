@@ -1,3 +1,7 @@
+
+![CSS](./working_with_css.jpg)
+
+
 ## Class 1: Introduction to CSS and Text Formatting
 
 ### Part 1: Introduction to CSS
@@ -5,9 +9,13 @@
 **Definition:**
 CSS stands for Cascading Style Sheets. It is a language used to describe the presentation of web pages, including their layout, colors, fonts, and more. CSS allows you to control the visual appearance of HTML elements on a webpage.
 
+![alt](./css-declaration.png)
+
+
 **Implementation:**
 CSS can be applied to HTML elements using three different methods: Inline, Internal, and External.
 
+![typesOfCss](./types-of-css.png)
 1. **Inline CSS:**
    Inline CSS is applied directly to an HTML element using the `style` attribute. It's useful for making small, specific style changes.
 
