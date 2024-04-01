@@ -450,7 +450,7 @@ The CSS Box Model describes the layout and rendering of elements in a web page. 
 - **`border`**: Shorthand for setting border width, style, and color simultaneously.
   - Value: Width, style, color.
 
-Certainly! Let's go through each CSS property with explanations and examples.
+  >  Example :- border: 10px solid red;
 
 ### `border-collapse`
 
@@ -658,6 +658,9 @@ You can define the margin values in different ways:
 | It is the space outside of the border       | it is the space inside the space the border.         |
 | You can set margin values to be negative if you want element to overlap. | padding value can only be positive. |
 | When you set the margin values the element size doesnot change, only the space arong it. | When you set padding values, the size of that element increses. |
+
+
+# Display Properties
                                        
 
 
